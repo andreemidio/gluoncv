@@ -42,6 +42,7 @@ while(cap.isOpened()):
     
     ret, frame = cap.read()
     frame = mx.nd.array(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)).astype('uint8')
+    # img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
 
     x, frame = gcv.data.transforms.presets.ssd.transform_test(frame, short=512, max_size=350)
     x = x.as_in_context(ctx)
@@ -58,6 +59,7 @@ while(cap.isOpened()):
         img = cv_plot_keypoints(frame, pred_coords, confidence, class_IDs, bounding_boxs, scores,
                                 box_thresh = 0.5, keypoint_thresh =0.2)
 
+    # img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
     cv_plot_image(img)
     #cv2.imshow('frame',frame)
     cv2.imwrite("frames/frame%d.jpg" % count, img)

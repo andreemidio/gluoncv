@@ -1,0 +1,5 @@
+Uma das coisas mais intererssantes da ferramenta Pose Estimation é o uso com exercicios fisícos.
+Aprendendo um pouco da ferramenta da Microsoft GluonCV, que me deixou espantado com a facilidade de uso.
+Fiz um tutorial com um video, onde estou fazendo agachamento, e isso me ajuda a ver o que posso melhorar.
+
+Link do projeto de estudo : https://github.com/andreemidio/gluoncv

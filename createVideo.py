@@ -6,7 +6,7 @@ import glob
 width = 640
 height =  480
 size = (width,height)
-FPS = 24
+FPS = 15
 
 img_array = []
 for filename in glob.glob('frames/*.jpg'):
@@ -16,7 +16,7 @@ for filename in glob.glob('frames/*.jpg'):
     img_array.append(img)
  
  
-out = cv2.VideoWriter('projectPoseEstimation.avi',cv2.VideoWriter_fourcc(*'DIVX'), FPS, size)
+out = cv2.VideoWriter('projectPoseEstimation.mp4',cv2.VideoWriter_fourcc(*'mp4v'), FPS, size)
  
 for i in range(len(img_array)):
     out.write(img_array[i])
